@@ -1,0 +1,110 @@
+{
+	"info": {
+		"_postman_id": "4d0b9523-f800-40f1-830c-b26b4814a3d1",
+		"name": "Hastane Randevu",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32744686"
+	},
+	"item": [
+		{
+			"name": "doktor save",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"ad\": \"Dr. Gökçe\",\n    \"soyad\": \"ARSLAN\",\n    \"brans\": \"KBB\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/doktor/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"doktor",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "randevu save",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"tarih\": \"03.03.2024\",\n    \"ad\": \"Ayşe\",\n    \"soyad\": \"ÇELİK\",\n    \"doktorAd\": \"Dr. Gökçe\",\n    \"doktorSoyad\": \"ARSLAN\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/randevu/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"randevu",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "doktor get-by-ad-and-soyad",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/doktor/get-by-ad-and-soyad?ad=Dr. Gökçe&soyad=ARSLAN",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"doktor",
+						"get-by-ad-and-soyad"
+					],
+					"query": [
+						{
+							"key": "ad",
+							"value": "Dr. Gökçe"
+						},
+						{
+							"key": "soyad",
+							"value": "ARSLAN"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
