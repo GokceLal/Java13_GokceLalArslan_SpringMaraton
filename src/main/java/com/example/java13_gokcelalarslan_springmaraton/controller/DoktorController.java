@@ -12,9 +12,11 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+import static com.example.java13_gokcelalarslan_springmaraton.constants.RestApiUrls.DOKTOR;
+
 
 @RestController
-@RequestMapping("/doktor")
+@RequestMapping(DOKTOR)
 @RequiredArgsConstructor
 public class DoktorController {
 
